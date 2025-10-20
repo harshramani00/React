@@ -1,5 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
 const resList = [
   {
     id: 1,
@@ -24,7 +22,7 @@ const resList = [
     name: "La Pino’z Pizza",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE931xRgYFEAJQAz3u3Xxl4R0EUoJPTdpLqN9Nx43G49YbRA&s",
     cuisine: "Italian, Pizza, Fast Food",
-    rating: 4.1,
+    rating: 3.9,
     deliveryTime: "28 mins",
     location: "MG Road, Bangalore"
   },
@@ -51,7 +49,7 @@ const resList = [
     name: "Café Mocha Bean",
     image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
     cuisine: "Café, Beverages, Bakery",
-    rating: 4.2,
+    rating: 3.8,
     deliveryTime: "18 mins",
     location: "Koramangala, Bangalore"
   },
@@ -74,59 +72,4 @@ const resList = [
     location: "Electronic City, Bangalore"
   }
 ];
-
-// Header
-const Header = () =>{
-    return (
-        <div className="header-container">
-            <div className="logo-container">
-                <img alt = "Logo.jpg" className = "logo" src = "https://images-platform.99static.com//s_-2qgRrPZnWUpWIh4NeIu95UCE=/0x0:999x999/fit-in/500x500/99designs-contests-attachments/118/118612/attachment_118612943"/>
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    )
-};
-// Body
-const Body = () => {
-    return (
-        <div className="body-container">
-            <div className="search">Search</div>
-            <div className="restaurant-list">
-                {resList.map((restaurant, index) => <RestaurantCard key={restaurant.id} resdata={restaurant} />)}
-            </div>
-        </div>
-    )
-};
-// Restaurant Card
-const RestaurantCard = (props) => {
-    const {resdata} = props
-    const {name, cuisine, deliveryTime, ratings, image} = resdata
-    return (
-        <div className="restaurant-card">
-            <img alt="res-logo" className="res-logo" src={image}/>
-            <h3>{name}</h3>
-            <h4>{cuisine}</h4>
-            <h4>{deliveryTime}</h4>
-            <h4>{ratings}</h4>
-        </div>
-    )
-};
-// App Layout
-const App = () => {
-    return (
-        <div className="app-containter">
-            <Header />
-            <Body />
-
-        </div>
-    )
-};
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+export default resList;

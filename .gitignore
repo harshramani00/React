@@ -1,3 +1,18 @@
-/node_modules
-/.parcel-cache
-/dist
+# deps
+node_modules/
+
+# parcel / build outputs
+.parcel-cache/
+dist/
+.cache/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+debug.log
+
+# env & editors
+.env
+.vscode/
+.idea/
